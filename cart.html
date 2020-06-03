@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>SpeedKart | about</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="new.css" />
+
+        </head>
+        <body>
+               <header class="header">
+                   <h1 class="titledesign">SpeedKart</h1>
+                   <div class="sublink">
+                            <a href="index.html">HOME</a>
+                            <a href="about.html">ABOUT</a>
+                            <a href="cart.html" class="right">CART<span>0</span></a>
+                   </div>  
+               </header>
+              
+              <div class=cart-section>
+                  <div class="head">
+                      <h5 class = "title">PRODUCT</h5>
+                      <h5 class = "price">PRICE</h5>
+                      <h5 class = "quantity">QUANTITY</h5>
+                      <h5 class="total">TOTAL</h5>
+                  </div>
+                  <div class="products"></div>
+              </div>
+
+
+
+        <div class="footer">
+           
+                <p>Speedkart: The One-stop Shopping Destination
+                    E-commerce is revolutionizing the way we all shop in India.
+                     </p>
+            </div>
+
+            <script>
+                 fetch ('http://localhost:3000/carts')
+    .then ((res) => res.json())
+    .then(pc => {
+        console.log(pc)
+        });
+
+            </script>
+
+    </body>
+</html>

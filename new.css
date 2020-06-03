@@ -1,0 +1,129 @@
+
+* {
+    box-sizing: border-box;
+    font-family: Raleway;
+    color: #777;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.sublink {
+    margin: 0;
+    text-align: center;
+}
+
+
+.sublink a {
+    display: inline-block;
+    padding: 20px 50px;
+    color: white;
+    text-decoration: none;
+
+}
+.sublink a.right {
+    float: right;
+  }
+
+.sublink a:hover {
+    background-color: rgba(255, 255, 255, .3)
+}
+
+.header {
+    background-color: lightseagreen;  
+    padding-bottom:5px
+    
+}
+
+.titledesign {
+    text-align: left;
+    margin: 0;
+    font-size: 8em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: white;
+}
+
+.sec {
+    font-family: "ariel";
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    font-size: 2.5em;
+
+}
+.content {
+    margin: 1em;
+}
+
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: black;
+}
+
+img{
+    border-radius:20px;
+    margin: 0%;
+    
+}
+.image{
+    background-color: teal;
+    margin-bottom: 25px;
+    text-align: center;
+}
+h3{
+    color: black;
+}
+.shop{
+    margin: 100px;
+     width :20%;
+     height:100%;
+     float:left;
+}
+.add-cart {
+    cursor: pointer;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:lightblue;
+    color: white;
+    text-align: left;
+ }
+
+.cart-section{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.head{
+      width: 100;
+      max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid #777;
+    margin: 0 auto;
+}
+.title {
+    width: 45%;
+}
+.price {
+    width: 20%;
+}
+.quantity {
+    width: 20%;
+}

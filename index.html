@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,45 +15,16 @@
                    <div class="sublink">
                             <a href="index.html">HOME</a>
                             <a href="about.html">ABOUT</a>
-                            <a href="cart.html" class="right">CART<span>0</span></a>
+                            <a href="cart.html" class="right">CART</a>
                    </div>  
                </header>
 
                <div class="content section"  id="product">
-                <button class="add-cart" href="#">ADD TO CART</button>
+           <button class="addtocart" href="#" type="onclick">ADD TO CART</button>
                </div>
                
         
-<script>
-                
-function fetchdata() {
-    fetch ('http://localhost:3000/products')
-    .then ((res) => res.json())
-    .then(pc => {
-         
-        let result =`<h2 class="sec">PRODUCTS</h2>`;
-
-        pc.forEach(user => {
-            result += `
-           
-            <div class="content section">
-            <div class="shop item">
-            <div class="image">
-            <img src ="${user.image}" alt="${user.image}">
-            <h3>${user.name}</h3>
-            <h3>rs${user.price}</h3>
-            <button class="add-cart">ADD TO CART</button>  
-            </div>
-            </div>
-            </div>`
-        });
-    document.getElementById("product").innerHTML= result;
-        })
-        .catch(error => {
-            console.log(error)
-         })
-        }
-fetchdata();
+<script src="pscript.js">
 </script>
         
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+ <html>
     <head>
         
         <title>SpeedKart | about</title>
@@ -18,7 +18,7 @@
                    </div>  
                </header>
              
-             <div id="carts"></div>
+               <div class="content section"  id="cart"></div>
 
 
 
@@ -29,32 +29,7 @@
                      </p>
             </div>
 
- <script>
-     Object.onload=function(){
-   let cc= document.querySelector("#add-cart")
-    cc.addEventListener('click' ,carts) 
-     }
-  function cart() {
-    fetch ('http://localhost:3000/carts', {
-        method: 'POST'
-        
-    })
-           .then ((res) => res.json())
-           .then(cart => {
-               console.log(cart);
-           let cartitem ='<h2>Welcome to Cart!!</h2>'
-   
-       cart.forEach(user => {
-         ` <div class=cart-section>
-             <div class="head">
-                 <h5 class = "title">${user.name}</h5>
-             </div>
-             </div>`
-   });
-   document.getElementById("carts").innerHTML= cartitem;
-   })
-   }
-   cart();
+ <script src="shopcart.js">
  </script>
         
 

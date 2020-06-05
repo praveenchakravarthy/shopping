@@ -4,7 +4,7 @@
         <title>SpeedKart | store</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="new.css" />
+        <link rel="stylesheet" href="style.css" />
         
 
         </head>
@@ -18,12 +18,42 @@
                    </div>  
                </header>
 
-               <div class="content section"  id="product"></div>
+               <div class="content section"  id="product">
+                <button class="add-cart" href="#">ADD TO CART</button>
+               </div>
+               
         
+<script>
+                
+function fetchdata() {
+    fetch ('http://localhost:3000/products')
+    .then ((res) => res.json())
+    .then(pc => {
+         
+        let result =`<h2 class="sec">PRODUCTS</h2>`;
+
+        pc.forEach(user => {
+            result += `
+           
+            <div class="content section">
+            <div class="shop item">
+            <div class="image">
+            <img src ="${user.image}" alt="${user.image}">
+            <h3>${user.name}</h3>
+            <h3>rs${user.price}</h3>
+            <button class="add-cart">ADD TO CART</button>  
+            </div>
+            </div>
+            </div>`
+        });
+    document.getElementById("product").innerHTML= result;
+        })
+        .catch(error => {
+            console.log(error)
+         })
+        }
+fetchdata();
+</script>
         
-        
-        
-               <script src="script.js"></script>
-        
-            </body>
-        </html>
+</body>
+</html>

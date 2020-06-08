@@ -1,14 +1,22 @@
 
 function cartdata() {
+    var final = 0;
+    //var quantity = 0;
     fetch ('http://localhost:3000/carts')
     .then ((res) => res.json())
     .then(pc => {
          
-        let result =`<h2>Welcome to cart!!</h2>`;
-
+        let fresult =`<h2>Welcome to cart!!</h2>`;
+        let result = `<h2 class="sec">PRODUCTS</h2>`;
         pc.forEach(user => {
-            result += `
+           var cost=user.price;
+           final= parseInt(final)+parseInt(cost);
            
+           //var num=user.id;
+           //quantity= parseInt(quantity)+parseInt(num);
+
+            fresult += `
+            
             <div class="content section">
             <div class="shop item">
             <div class="image">
@@ -18,17 +26,21 @@ function cartdata() {
             <button class="addtocart" href="#" onclick="remove('${user.id}')">REMOVE</button> 
             </div>
             </div>
-            </div>`
+            </div>
+            `
+           
         });
-    document.getElementById("cart").innerHTML= result;
+
+        fresult += `<h2 class ="sec">TOTAL : ${final}</h2>`;
+        
+    document.getElementById("cart").innerHTML= fresult;
+    document.getElementById("product").innerHTML= result;
         })
         .catch(error => {
             console.log(error)
          })
         }
 cartdata();
-
-
 
 
 function remove(id) {

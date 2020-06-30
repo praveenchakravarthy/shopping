@@ -91,9 +91,10 @@ h3{
      height:100%;
      float:left;
 }
-.add-cart {
+.addtocart {
     cursor: pointer;
   }
+
 
   .footer {
     position: fixed;

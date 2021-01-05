@@ -1,2 +1,2 @@
 # shopping
-online shop
+online shop using fetch api crud operation
